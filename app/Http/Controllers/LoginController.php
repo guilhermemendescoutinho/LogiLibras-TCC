@@ -12,12 +12,17 @@ class LoginController extends Controller
     public function logar(Request $request){
         $dados = $request -> validate([
             'email' => ['required', 'email'],
-            'senha' => ['required']
-        ]);
+            'password' => ['required']
+        ], [
+            'email.required' => 'O campo email é obrigatório',
+            'email.email' => 'O email precisa ser válido',
+            'password.required' => 'o campo senha é obrigatório'
+        ]
+    );
 
             if(Auth::attempt($dados)){
                 $request -> session() -> regenerate();
-                return redirect('admin.conteudo');
+                return redirect()->intended('conteudo');
             }
             else{
                 return redirect()->back()->with('erro', 'Dados Inválidos');

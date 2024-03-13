@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/login', 'admin.login')->name('admin.login')->name('admin.login');
-Route::post('/logar', [LoginController::class, 'admin.logar'])->name('admin.logar');
+Route::view('/conteudo', 'conteudo');
+Route::view('/login', 'admin.login')->name('login')->name('admin.login');
+Route::post('/logar', [LoginController::class, 'logar'])->name('admin.logar');

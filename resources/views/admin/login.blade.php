@@ -28,13 +28,19 @@
                 {{$mensagem}}
             @endif
 
+            @if ($errors->any())
+                @foreach($errors->all() as $error)
+                    {{$error}}
+                @endforeach
+            @endif
+
             <form action="{{route("admin.logar")}}" method="post" >
             @csrf
 
                 <h1>Login</h1>
 
                 <input type="email" placeholder="Email:" name="email" id="input-email" class="campo">
-                <input type="password" placeholder="Senha:" name="senha" id="input-senha" class="campo">
+                <input type="password" placeholder="Senha:" name="password" id="input-senha" class="campo">
 
 
                 <button type="submit" class="campo botao">Enviar</button>
