@@ -63,7 +63,7 @@
                 <div class="designation">----</div>
               </div>
             </div>
-           <li><a href="{{route('login.logout')}}">Logout</a></li>
+           <li><a href="{{route('admin.logout')}}">Logout</a></li>
         </ul>
       </div>
 
