@@ -30,7 +30,7 @@
           <li>
             <a href="#">
               <i class="bx bx-user"></i>
-              <span class="link_name">Usuário</span>
+              <span class="link_name">Olá  </span>
             </a>
             <span class="tooltip">Usuário</span>
           </li>
@@ -63,8 +63,7 @@
                 <div class="designation">----</div>
               </div>
             </div>
-            <i class="bx bx-log-out" id="log_out"></i>
-          </li>
+           <li><a href="{{route('login.logout')}}">Logout</a></li>
         </ul>
       </div>
 

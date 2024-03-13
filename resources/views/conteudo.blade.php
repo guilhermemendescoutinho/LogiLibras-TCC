@@ -8,11 +8,15 @@
 </head>
 <body>
 
+
+
     @include('admin.partials.menu')
 
    <div id="adicionar">
     <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/bw/128px/2795.png" alt="adicionar">
    </div>
 
+
+   
 </body>
 </html>
