@@ -28,8 +28,8 @@
                 {{$mensagem}}
             @endif
 
-            <form action="{{route('admin.logar')}}" method="post" >
-                @csrf
+            <form action="{{route("admin.logar")}}" method="post" >
+            @csrf
 
                 <h1>Login</h1>
 
