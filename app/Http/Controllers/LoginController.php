@@ -33,6 +33,11 @@ class LoginController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect(route('loginadmin.login'));
+        return redirect(route('login'));
     }
+
+    public function create(){
+        return view('admin.create');
+    }
+
 }

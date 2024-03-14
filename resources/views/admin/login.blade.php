@@ -49,7 +49,7 @@
                     <input type="checkbox" name="manter-logado">
                     <label for="manter-logado">Manter-me logado</label>
                 </div>
-                <p>Não possui uma conta? <a href="./cadastro.html" style="color: aqua; cursor: pointer; text-decoration: underline;">Cadastre-se</a></p>
+                <p>Não possui uma conta? <a href="{{route('admin.create')}}" style="color: aqua; cursor: pointer; text-decoration: underline;">Cadastre-se</a></p>
             </form>
         </section>
     </main>

@@ -28,12 +28,14 @@
             <span class="tooltip">Cursos</span>
           </li>
           <li>
+            @auth
             <a href="#">
               <i class="bx bx-user"></i>
               <span class="link_name">Olá {{Auth::user()->name}} </span>
             </a>
             <span class="tooltip">Usuário</span>
           </li>
+          @endauth
           <li>
             <a href="#">
               <i class="bx bx-chat"></i>

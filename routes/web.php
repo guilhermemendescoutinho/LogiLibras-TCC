@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::resource('users', UserController::class);
 
-Route::view('/conteudo', 'conteudo');
-Route::view('/login', 'admin.login')->name('login')->name('admin.login');
+Route::view('/conteudo', 'conteudo')->name('conteudo')->middleware('auth');
+Route::view('/login', 'admin.login')->name('login');
 Route::post('/logar', [LoginController::class, 'logar'])->name('admin.logar');
 Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
+Route::get('/register', [LoginController::class, 'create'])->name('admin.create');

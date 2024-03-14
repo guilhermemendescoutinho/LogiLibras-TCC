@@ -24,20 +24,23 @@
         </section>
 
         <section class="cadastro-container" >
-            <form method="post" action="{{}}">
+
+            <form method="post" action="{{route('users.store')}}">
+            @csrf
+
                 <h1>Cadastro</h1>
 
-                <input type="text" placeholder="Nome:" name="nome" class="campo">
+                <input type="text" placeholder="Nome:" name="name" class="campo">
                 <span class="erroNome"></span>
                 <input type="email" placeholder="Email:" name="email" class="campo">
                 <span class="erroEmail erro"></span>
-                <input type="password" placeholder="Senha:" name="senha" class="campo">
+                <input type="password" placeholder="Senha:" name="password" class="campo">
                 <span class="erroSenha erro" ></span>
-                <input type="password" placeholder="Confirme a senha:" name="confirmar_senha" class="campo">
+                <input type="password" placeholder="Confirme a senha:" name="password" class="campo">
                 <span class="erroSenha" ></span>
 
                 <button type="submit" class="campo botao" name="enviar">Enviar</button>
-                <p>Já possui uma conta? <a href="./login.html" style="color: aqua; cursor: pointer; text-decoration: underline;">Faça Login</a></p>
+                <p>Já possui uma conta? <a href="{{route('login')}}" style="color: aqua; cursor: pointer; text-decoration: underline;">Faça Login</a></p>
 
 
             </form>
