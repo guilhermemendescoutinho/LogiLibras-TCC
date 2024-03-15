@@ -39,14 +39,14 @@ class UserController extends Controller
             'email.unique' => 'Endereço já cadastrado. Por favor, use outro email!'
            ];
 
-       $user = $request->all();
-       $request->validate($regras);
-       $user['password'] = bcrypt($request->password);
-       $user = User::create($user);
+        $user = $request->all();
+        $request->validate($regras);
+        $user['password'] = bcrypt($request->password);
+        $user = User::create($user);
 
-       Auth::login($user);
+        Auth::login($user);
 
-       return redirect()->route('conteudo');
+        return redirect()->route('conteudo');
     }
 
     /**

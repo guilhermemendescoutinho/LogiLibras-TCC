@@ -15,7 +15,10 @@ use App\Http\Controllers\UserController;
 */
 Route::resource('users', UserController::class);
 
-Route::view('/conteudo', 'conteudo')->name('conteudo')->middleware('auth');
+Route::middleware('auth')->group(function(){
+    Route::view('/conteudo', 'conteudo')->name('conteudo');
+});
+
 Route::view('/login', 'admin.login')->name('login');
 Route::post('/logar', [LoginController::class, 'logar'])->name('admin.logar');
 Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');

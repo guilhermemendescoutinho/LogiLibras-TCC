@@ -31,7 +31,7 @@
             @auth
             <a href="#">
               <i class="bx bx-user"></i>
-              <span class="link_name">Olá {{Auth::user()->name}} </span>
+              <span class="link_name"> {{Auth::user()->name}} </span>
             </a>
             <span class="tooltip">Usuário</span>
           </li>
@@ -57,15 +57,25 @@
             </a>
             <span class="tooltip">Configurações</span>
           </li>
+          @can('access')
+            <li>
+                <a href="#">
+                    <i class='bx bx-plus-circle'></i>
+                <span class="link_name">Novo Módulo</span>
+                </a>
+                <span class="tooltip"></span>
+            </li>
+            @endcan
+
           <li class="profile">
             <div class="profile_details">
               <!-- <img src="profile.jpeg" alt="profile image"> -->
               <div class="profile_content">
-                <div class="name">----</div>
-                <div class="designation">----</div>
+                <div class="name"></div>
+                <div class="designation"></div>
               </div>
             </div>
-           <li><a href="{{route('admin.logout')}}">Logout</a></li>
+            <a href="{{route('admin.logout')}}"><i class="bx bx-log-out" id="log_out"></i></a>
         </ul>
       </div>
 
