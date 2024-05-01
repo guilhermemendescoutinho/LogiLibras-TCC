@@ -29,7 +29,8 @@
           </li>
           <li>
             @auth
-            <a href="#">
+
+            <a href="{{route('perfil')}}">
               <i class="bx bx-user"></i>
               <span class="link_name"> {{Auth::user()->name}} </span>
             </a>

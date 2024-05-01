@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/login.css">
 
@@ -38,7 +37,6 @@
             @csrf
 
                 <h1>Login</h1>
-
                 <input type="email" placeholder="Email:" name="email" id="input-email" class="campo">
                 <input type="password" placeholder="Senha:" name="password" id="input-senha" class="campo">
 

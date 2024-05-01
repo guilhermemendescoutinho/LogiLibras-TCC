@@ -17,6 +17,7 @@ Route::resource('users', UserController::class);
 
 Route::middleware('auth')->group(function(){
     Route::view('/conteudo', 'conteudo')->name('conteudo');
+    Route::view('/perfil', 'admin.perfil')->name('perfil');
 });
 
 Route::view('/login', 'admin.login')->name('login');

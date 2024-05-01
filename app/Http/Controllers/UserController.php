@@ -47,7 +47,14 @@ class UserController extends Controller
         Auth::login($user);
 
         return redirect()->route('conteudo');
+
+        // área de envio de imagem de perfil
+    
     }
+
+
+    // área de envio de imagem de perfil
+
 
     /**
      * Display the specified resource.

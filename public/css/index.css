@@ -6,6 +6,7 @@ body{
     justify-content: start;
     position: absolute;
     left: 200px;
+    background-color: #324655;
 }
 
 #adicionar{
@@ -26,5 +27,6 @@ body{
 
 .conteudo h3{
     text-align: center;
+    font-size: 100px;
 }
 

@@ -1,0 +1,94 @@
+@charset 'UTF-8';
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #324655;
+}
+
+form{
+    width: 90vh;
+    height: 60vh;
+    background-color: #5271FF;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+label{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #05186d;
+    border-radius: 50%;
+    background-color: #ebe6e0;
+    margin-right: 25px;
+}
+
+label  i{
+    font-size: 150px;
+    display: flex;
+    position: absolute;
+    top: 65px;
+    left: 470px;
+}
+
+input[type=file]{
+   display: none;
+}
+
+
+#nome{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    display: inline;
+    position: absolute;
+    top: 115px;
+    color: #fff;
+}
+
+#detalhe1, #detalhe2{
+    display: inline;
+}
+
+#detalhe1{
+    position: absolute;
+    top: 150px;
+    left: 710px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#detalhe2{
+    position: absolute;
+    left: 400pxpx;
+    top: 150px;
+    border: 1px solid rgb(71, 224, 224);
+    color: rgb(71, 224, 224);
+    background-color: rgb(71, 224, 224);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+#email{
+    margin-left: 20px;
+    font-size: 18px;
+    text-decoration: underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    margin-top: 70px;
+}
+
+#pontos{
+    display: flex;
+    position: absolute;
+    top: 220px;
+    left: 670px;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 20px;
+}
